@@ -1,0 +1,21 @@
+{
+  "name": "api-super-trunfo",
+  "version": "1.0.0",
+  "description": "Api em express para jogo super trunfo com temática de seleções de futebol",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
+    "start": "tsc && node dist/server.js"
+  },
+  "keywords": [],
+  "author": "Ricardo Fredes",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "ts-node-dev": "^1.0.0-pre.39",
+    "typescript": "^3.4.5"
+  }
+}
