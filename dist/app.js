@@ -10,13 +10,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const path_1 = __importDefault(require("path"));
 const express_1 = __importDefault(require("express"));
 const cardsController = __importStar(require("./controllers/cartas"));
 const cors = require('cors');
 const app = express_1.default();
 app.use(cors());
-app.get('/', (req, res) => res.sendFile(path_1.default.join(__dirname + '/views/index.html')));
+app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'));
 app.get('/cartas', cardsController.index);
 app.get('/cartas/sorteio', cardsController.random);
 exports.default = app;

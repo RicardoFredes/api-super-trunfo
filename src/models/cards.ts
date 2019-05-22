@@ -322,39 +322,3 @@ const cards = [
 ];
 
 export default cards;
-
-// // Helpers de funcoes
-// const executaUmaFuncaoRecursivamenteXVezes = (executor, x, arrayInicial) => {
-//     if (x === 0) return arrayInicial
-//     return executaUmaFuncaoRecursivamenteXVezes(executor, x - 1, executor(arrayInicial))
-// }
-//
-// const executaUmaFuncaoAteGerarUmValorDiferenteNoArray = (executor, arrayBase = []) => {
-//     const novoElemento = executor()
-//     if (!arrayBase.includes(novoElemento)) return [...arrayBase, novoElemento]
-//     return executaUmaFuncaoAteGerarUmValorDiferenteNoArray(executor, arrayBase)
-// }
-//
-// const curryfy = (method, ...parametrosFixos) => (...outrosParametros) => method(...parametrosFixos, ...outrosParametros)
-//
-// // Helpers de sorteio
-//
-// const sorteioDeZeroAX = (x) => Math.floor(x * Math.random())
-//
-// const sorteiaXNumerosNaoRepetidosDeNoMaximoMax = (x) => (max) => {
-//     const executor = () => sorteioDeZeroAX(max)
-//     const funcaoRecursiva = curryfy(executaUmaFuncaoAteGerarUmValorDiferenteNoArray, executor)
-//     return executaUmaFuncaoRecursivamenteXVezes(funcaoRecursiva, x, [])
-// }
-//
-// const sortearXElementosDeUmArray = (x, array) => {
-//     const max = array.length
-//     if (x > max) x = max
-//     const indices = sorteiaXNumerosNaoRepetidosDeNoMaximoMax(x)(max)
-//     return indices.map(i => array[i])
-// }
-//
-// const sortearXCartas = x => sortearXElementosDeUmArray(x, cartas)
-//
-// const sorteio = sortearXCartas(2)
-// console.log(sorteio)
